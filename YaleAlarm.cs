@@ -10,15 +10,12 @@ namespace YaleAlarm
 {
     public class YaleAlarm
     {
-
         private static readonly Lazy<YaleAlarm> lazy = new Lazy<YaleAlarm>(() => new YaleAlarm());
         public static YaleAlarm Instance { get => lazy.Value; }
-
-        public static string YALE_STATE_ARM_FULL = "arm";
-        public const string YALE_STATE_ARM_PARTIAL = "home";
-        public const string YALE_STATE_DISARM = "disarm";
-
-
+        
+        const string YALE_STATE_ARM_FULL = "arm";
+        const string YALE_STATE_ARM_PARTIAL = "home";
+        const string YALE_STATE_DISARM = "disarm";
         const string _HOST = "https://mob.yalehomesystem.co.uk/yapi";
         const string _ENDPOINT_TOKEN = "/o/token/";
         const string _ENDPOINT_SERVICES = "/services/";
@@ -30,20 +27,16 @@ namespace YaleAlarm
         WebClient client;
         ResonseModel resonseModel;
 
-        public YaleAlarm()
-        {
-
-
-        }
-
+        public YaleAlarm() {}
+        
         public bool GetAuthenticated()
         {
             var url = _HOST + _ENDPOINT_TOKEN;
             var pModel = new PostModel
             {
                 grant_type = "password",
-                username = "yourusername",
-                password = "yourpassword"
+                username = "YOURUSERNAME", //normally email address
+                password = "YOURPASSWORD"
             };
 
             var reqparm = new System.Collections.Specialized.NameValueCollection();
