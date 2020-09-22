@@ -1,2 +1,2 @@
-# yale-smart-alarm-control
-Yale Smart Alarm Client c#
+# Yale C# to control your Smart Yale Alarm
+Yale Smart Alarm Client **c#**
