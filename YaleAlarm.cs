@@ -42,8 +42,8 @@ namespace YaleAlarm
             var pModel = new PostModel
             {
                 grant_type = "password",
-                username = "charles.jardine@nathan-software.com",
-                password = "Revelati0n4040"
+                username = "yourusername",
+                password = "yourpassword"
             };
 
             var reqparm = new System.Collections.Specialized.NameValueCollection();
